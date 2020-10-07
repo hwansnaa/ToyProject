@@ -23,7 +23,7 @@ def tokenize(sentences, stopwords):
     twitter = Twitter()
     nouns = []
     for sentence in sentences:
-        nouns.append(''.join([noun for noun in twitter.nouns(str(sentences)) if noun not in stopwords and len(noun) > 2])) # 불용어와 길이가 2 이하인 단어들 제거 ex. 아, 아니 etc.
+        nouns.append(''.join([noun for noun in twitter.nouns(str(sentence)) if noun not in stopwords and len(noun) > 2])) # 불용어와 길이가 2 이하인 단어들 제거 ex. 아, 아니 etc.
     return nouns
 ```
 
